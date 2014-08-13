@@ -18,10 +18,16 @@ CentOS 6.5
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['sixpack_ab']['repo']</tt></td>
+    <td><tt>['sixpack_ab']['sixpack']['repo']</tt></td>
     <td>string</td>
     <td>github repo</td>
     <td><tt>https://github.com/seatgeek/sixpack</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['sixpack_ab']['sixpack]['branch']</tt></td>
+    <td>string</td>
+    <td>github branch</td>
+    <td><tt>master</tt></td>
   </tr>
 </table>
 
@@ -37,6 +43,19 @@ Include `sixpack_ab` in your node's `run_list`:
   "run_list": [
     "recipe[sixpack_ab::default]"
   ]
+}
+```
+
+### if using the included Vagrant file remove or change the repo or branch
+
+```
+chef.json = {
+  sixpack_ab: {
+    sixpack: {
+      repo: 'git://github.com/ricksaenz/sixpack.git',
+      branch: 'rs_environment'
+    }
+  }
 }
 ```
 

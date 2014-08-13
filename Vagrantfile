@@ -26,8 +26,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :chef_solo do |chef|
     chef.json = {
       sixpack_ab: {
-        repo: 'git://github.com/ricksaenz/sixpack.git',
-        branch: 'master'
+        sixpack: {
+          repo: 'git://github.com/ricksaenz/sixpack.git',
+          branch: 'rs_environment'
+        }
       }
     }
 

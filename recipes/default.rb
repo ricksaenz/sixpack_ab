@@ -16,9 +16,6 @@ include_recipe "redisio::install"
 include_recipe "redisio::enable"
 include_recipe "git"
 
-node.override[:sixpack_ab][:sixpack][:repo] = "git://github.com/ricksaenz/sixpack.git"
-node.override[:sixpack_ab][:sixpack][:branch] = "rs_fractions"
-
 git "/usr/src/sixpack" do
   repository node[:sixpack_ab][:sixpack][:repo]
   reference node[:sixpack_ab][:sixpack][:branch]
