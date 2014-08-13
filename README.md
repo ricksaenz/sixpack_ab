@@ -33,9 +33,9 @@ CentOS 6.5
 
 ## Usage
 
-### sixpack_ab::default
+### sixpack_ab::default OR sixpack::sixpack_packaged
 
-Include `sixpack_ab` in your node's `run_list`:
+Include `sixpack_ab` in your node's `run_list`, default installs from source, sixpack_packaged installs via pip:
 
 ```json
 
